@@ -1,7 +1,7 @@
 def bubble_sort(list):
-    for i in range(len(list), 0, -1):                           #best case of bubble sort is O(n) when the list is already sorted or nearly sorted
-        for j in range(i-1):                                    #then the nested loop just walk through and do not execute anything. In this case
-            if list[j]>list[j+1]:                               #the main loop just iterate throughout the list n time. So this is O(n)
+    for i in range(len(list), 0, -1):
+        for j in range(i-1):
+            if list[j]>list[j+1]:
                 list[j],list[j+1]=list[j+1],list[j]
     return list
 
@@ -15,9 +15,9 @@ def selection_sort(list):
         list[min_index], list[i] = list[i], list[min_index]
     return list
 
-def insertion_sort(list):
-    for i in range(1, len(list)):
-        if list[i] < list[i-1]:
+def insertion_sort(list):                               #best case of bubble sort is O(n) when the list is already sorted or nearly sorted
+    for i in range(1, len(list)):                        #then the nested loop just walk through and do not execute anything. In this case
+        if list[i] < list[i-1]:                           #the main loop just iterate throughout the list n time. So this is O(n)
             index=i
             while (list[index]<list[index-1]):
                 list[index], list[index-1] = list[index-1], list[index]
